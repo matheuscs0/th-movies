@@ -1,0 +1,10 @@
+.swiper-slide-custom-page {
+    width: 800px; /* Largura padrão para telas maiores */
+  }
+  
+  @media (max-width: 640px) {
+    .swiper-slide-custom-page {
+      width: 300px; /* Largura para dispositivos móveis */
+    }
+  }
+  

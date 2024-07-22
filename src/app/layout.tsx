@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Archivo } from "next/font/google";
 import "./globals.css";
 import { SideBar } from "@/components/SideBar";
+import Provider from "@/contexts/Provider";
 
 const inter = Archivo({ subsets: ["latin"] });
 
@@ -18,8 +19,12 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={`${inter.className} bg-[#1A161F] w-full h-full flex text-white`}>
+      <Provider>
         <SideBar/>
+        
         {children}
+       
+      </Provider>
       </body>
     </html>
   );
